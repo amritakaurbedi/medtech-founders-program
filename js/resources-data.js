@@ -129,7 +129,7 @@ const RESOURCES = [
   {
     title: "PDR Sample Presentation",
     desc: "Example Preliminary Design Review deck.",
-    url: null,
+    url: "https://docs.google.com/presentation/d/1oWyPnVbbYIw_RY4zWSz_vYlsimGqophKuTn5kufqV58/edit?usp=sharing",
     type: "slides",
     section: "fall"
   },
