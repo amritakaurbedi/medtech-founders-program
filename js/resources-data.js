@@ -64,14 +64,14 @@ const RESOURCES = [
   {
     title: "Participation Contract",
     desc: "Sign to confirm your commitment to the program and your team.",
-    url: null,
+    url: "files/mfp-contract-2026-27.pdf",
     type: "pdf",
     section: "essentials"
   },
   {
     title: "Team Formation Form",
     desc: "Submit your team roster, or ask to be matched with a team.",
-    url: null,
+    url: "https://forms.gle/ALHf42EcTX1HChCYA",
     type: "form",
     section: "essentials"
   },
@@ -132,7 +132,7 @@ const RESOURCES = [
   {
     title: "CODR Sample Presentation",
     desc: "Example Conceptual Design Review deck to model yours on.",
-    url: null,
+    url: "https://docs.google.com/presentation/d/1RChqeF5Qc1RI2wTKQud1clOAvGZU0oIG-IBsTogdDgQ/edit?usp=sharing",
     type: "slides",
     section: "fall"
   },
