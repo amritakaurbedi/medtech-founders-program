@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resources | MedTech Founders Program</title>
+<meta name="description" content="Templates, forms, and guides for MedTech Founders Program members.">
+
+<!-- Social sharing preview (Open Graph + Twitter) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MedTech Founders Program">
+<meta property="og:title" content="Resources | MedTech Founders Program">
+<meta property="og:description" content="Templates, forms, and guides for MedTech Founders Program members.">
+<meta property="og:image" content="images/social/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Resources | MedTech Founders Program">
+<meta name="twitter:description" content="Templates, forms, and guides for MedTech Founders Program members.">
+<meta name="twitter:image" content="images/social/og-default.jpg">
+<meta name="theme-color" content="#0b1024">
+<link rel="icon" type="image/png" href="images/mfp-circle.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<div class="bg-glow"></div>
+<div class="bg-decor helix"></div>
+<div class="bg-decor molecule"></div>
+<div class="bg-decor circuit"></div>
+
+<header class="site-header">
+  <nav class="nav" aria-label="Main">
+    <a href="index.html" class="nav-brand">
+      <img src="images/mfp-circle.png" alt="MedTech Founders Program logo">
+      MedTech Founders
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="nav-dropdown">
+        <button class="nav-dropdown-toggle" type="button" aria-expanded="false">About<span class="nav-dropdown-caret" aria-hidden="true"></span></button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="about.html">Program</a></li>
+          <li><a href="team.html">Team</a></li>
+        </ul>
+      </li>
+      <li><a href="events/index.html">Events</a></li>
+      <li class="nav-dropdown">
+        <button class="nav-dropdown-toggle" type="button" aria-expanded="false">Events<span class="nav-dropdown-caret" aria-hidden="true"></span></button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="events/fall.html">Fall</a></li>
+          <li><a href="events/winter.html">Winter</a></li>
+          <li><a href="events/spring.html">Spring</a></li>
+        </ul>
+      </li>
+      <li><a href="calendar.html">Calendar</a></li>
+      <li><a href="resources.html" class="active">Resources</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <a href="https://bmesatucirvine.weebly.com/" target="_blank" rel="noopener" class="nav-bmes" aria-label="BMES at UCI">
+      <img src="images/bmes-logo.png" alt="BMES at UCI logo">
+    </a>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- ================= ACCESS GATE =================
+     Temporarily disabled while the resources page itself is being
+     reworked. Re-enable this block (and the gate scripts at the
+     bottom of the file) to reinstate password protection.
+<div id="resource-gate">
+  <section style="padding-top: 70px;">
+    <div class="container">
+      <div class="gate-panel">
+        <div class="eyebrow-rule" style="justify-content:center;">
+          <span class="rule-line"></span>
+          <span class="eyebrow">Members Only</span>
+          <span class="rule-line"></span>
+        </div>
+        <h1 style="font-size: clamp(1.7rem, 3.6vw, 2.2rem); margin-bottom: 12px;">Program Resources</h1>
+        <p style="color: var(--white-dim); margin-bottom: 28px;">
+          This page is for MedTech Founders Program members. Enter your UCI email to continue.
+        </p>
+
+        <form id="gate-form" class="gate-form" novalidate>
+          <div class="gate-field">
+            <label for="gate-email" class="gate-label">UCI email</label>
+            <input
+              type="email"
+              id="gate-email"
+              class="gate-input"
+              placeholder="you@uci.edu"
+              autocomplete="email"
+              required>
+          </div>
+
+          <div class="gate-field" id="gate-pass-field">
+            <label for="gate-pass" class="gate-label">Program passcode</label>
+            <input
+              type="password"
+              id="gate-pass"
+              class="gate-input"
+              placeholder="Shared with program members"
+              autocomplete="current-password"
+              required>
+          </div>
+
+          <button type="submit" class="btn btn-primary gate-submit">Continue</button>
+        </form>
+
+        <p id="gate-error" class="gate-error" role="alert"></p>
+
+        <p style="color: var(--white-faint); font-size: 0.88rem; margin-top: 22px;">
+          Not a member yet? <a href="contact.html" class="inline-link">Get in touch</a> to join the program.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+================================================================= -->
+
+<!-- ================= RESOURCES (shown after access) ================= -->
+<div id="resource-content">
+  <section style="padding-bottom: 30px;">
+    <div class="container">
+      <div class="eyebrow-rule"><span class="eyebrow">Members Only</span><span class="rule-line"></span></div>
+      <div class="resource-header">
+        <div>
+          <h1 style="font-size: clamp(2rem, 4.4vw, 2.7rem); margin-bottom: 12px;">Program Resources</h1>
+          <p style="color: var(--white-dim); max-width: 620px;">
+            Everything you need while working through the program &mdash; templates, tools, guides, and links.
+          </p>
+        </div>
+        <div class="signed-in-badge">
+          <span>Signed in as</span>
+          <strong id="signed-in-as"></strong>
+          <button type="button" id="sign-out" class="sign-out-btn">Sign out</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight-top" style="padding-top: 20px;">
+    <div class="container">
+
+      <div class="resource-toolbar">
+        <input
+          type="search"
+          id="resource-search"
+          class="resource-search"
+          placeholder="Search resources..."
+          aria-label="Search resources">
+        <nav id="resource-jump" class="resource-jump" aria-label="Jump to section"></nav>
+      </div>
+
+      <div id="resource-sections"></div>
+
+      <p id="resource-empty" class="resource-empty" style="display:none;">
+        No resources match that search.
+      </p>
+
+      <div class="resource-note">
+        <strong>Missing something?</strong>
+        <span>If there&rsquo;s a resource you need that isn&rsquo;t here, <a href="contact.html" class="inline-link">let us know</a> and we&rsquo;ll add it.</span>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/mfp-circle.png" alt="MFP logo">
+        <div>
+          <strong>MedTech Founders Program</strong>
+          <p>A product development incubator for undergraduate innovators</p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Site</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events/index.html">Events</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:bmes@uci.edu">bmes@uci.edu</a></li>
+          <li><a href="https://instagram.com/bmes_uci" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/company/bmesatucirvine/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://bmesatucirvine.weebly.com/" target="_blank" rel="noopener">BMES at UCI Website</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 MedTech Founders Program &middot; BMES at UCI
+    </div>
+  </div>
+</footer>
+
+<!-- Password gate disabled for now — re-enable along with the ACCESS GATE
+     block above to reinstate protection.
+<script src="js/allowed-emails.js"></script>
+<script src="js/resources-gate.js"></script>
+-->
+<script src="js/resources-data.js"></script>
+<script src="js/resources-render.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
