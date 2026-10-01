@@ -216,7 +216,9 @@ const RESOURCES = [
 
   /* ==========================================================
      WINTER — ENTREPRENEURIAL
-     ========================================================== */
+     Hidden for now (Coming Soon on the page). Uncomment when
+     Winter resources are ready.
+     ==========================================================
   {
     title: "Sample Open MIC Pitch Deck",
     desc: "A strong example pitch to benchmark your own against.",
@@ -280,10 +282,13 @@ const RESOURCES = [
     type: "doc",
     section: "winter"
   },
+  ========================================================== */
 
   /* ==========================================================
      SPRING — PROTOTYPING
-     ========================================================== */
+     Hidden for now (Coming Soon on the page). Uncomment when
+     Spring resources are ready.
+     ==========================================================
   {
     title: "Testing Plan Template",
     desc: "Plan how you'll validate that your prototype actually works.",
@@ -361,6 +366,7 @@ const RESOURCES = [
     type: "pdf",
     section: "spring"
   }
+  ========================================================== */
 
 ];
 

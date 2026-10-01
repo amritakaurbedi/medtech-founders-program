@@ -77,8 +77,28 @@
     var totalShown = 0;
 
     RESOURCE_SECTIONS.forEach(function (section) {
-      var items = RESOURCES.filter(function (r) {
-        if (r.section !== section.id) return false;
+      var allItems = RESOURCES.filter(function (r) { return r.section === section.id; });
+
+      // Section has no resources yet (e.g. commented out in the data
+      // file) — show a "Coming soon" placeholder instead of skipping it,
+      // but hide it while actively searching since it has nothing to match.
+      if (!allItems.length) {
+        if (query) return;
+
+        var comingWrap = el('div', 'resource-category');
+        comingWrap.id = 'section-' + section.id;
+
+        var comingHeader = el('div', 'resource-category-head');
+        comingHeader.appendChild(el('h2', null, section.label));
+        if (section.blurb) comingHeader.appendChild(el('p', null, section.blurb));
+        comingWrap.appendChild(comingHeader);
+
+        comingWrap.appendChild(el('p', 'resource-coming-soon', 'Coming soon.'));
+        host.appendChild(comingWrap);
+        return;
+      }
+
+      var items = allItems.filter(function (r) {
         if (!query) return true;
         return (r.title + ' ' + r.desc + ' ' + (r.type || '')).toLowerCase().indexOf(query) !== -1;
       });
@@ -110,9 +130,6 @@
     if (!nav) return;
 
     RESOURCE_SECTIONS.forEach(function (section) {
-      var hasItems = RESOURCES.some(function (r) { return r.section === section.id; });
-      if (!hasItems) return;
-
       var link = el('a', 'jump-link', section.label);
       link.href = '#section-' + section.id;
       nav.appendChild(link);
