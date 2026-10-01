@@ -110,7 +110,6 @@
 
         var comingHeader = el('div', 'resource-category-head');
         comingHeader.appendChild(el('h2', null, section.label));
-        if (section.blurb) comingHeader.appendChild(el('p', null, section.blurb));
         comingWrap.appendChild(comingHeader);
 
         comingWrap.appendChild(el('p', 'resource-coming-soon', 'Coming soon.'));
@@ -131,7 +130,6 @@
 
       var header = el('div', 'resource-category-head');
       header.appendChild(el('h2', null, section.label));
-      if (section.blurb) header.appendChild(el('p', null, section.blurb));
       wrap.appendChild(header);
 
       var grid = el('div', 'resource-grid');

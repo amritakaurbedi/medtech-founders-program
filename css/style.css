@@ -1495,14 +1495,6 @@ section { padding: 90px 0; }
   margin-bottom: 6px;
 }
 
-.resource-category-head p {
-  color: var(--white-dim);
-  font-size: 0.93rem;
-  margin: 0;
-  padding-bottom: 12px;
-  border-bottom: 1px solid rgba(120, 160, 220, 0.2);
-}
-
 .resource-coming-soon {
   color: var(--white-faint);
   font-size: 0.95rem;
