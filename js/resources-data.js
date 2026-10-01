@@ -111,7 +111,8 @@ const RESOURCES = [
       { label: "NotebookLM", url: "https://notebooklm.google.com" },
       { label: "Perplexity", url: "https://www.perplexity.ai" },
       { label: "GitHub Copilot", url: "https://github.com/features/copilot" },
-      { label: "Gamma", url: "https://gamma.app" }
+      { label: "Gamma", url: "https://gamma.app" },
+      { label: "Figma", url: "https://figma.com" }
     ]
   },
 
