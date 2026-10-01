@@ -78,7 +78,7 @@ const RESOURCES = [
   {
     title: "Deliverables Submission Form",
     desc: "Turn in deliverables at each checkpoint through the year.",
-    url: null,
+    url: "https://forms.gle/7TdMLKwMiEeV2qcv7",
     type: "form",
     section: "essentials"
   },
