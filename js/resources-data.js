@@ -45,6 +45,17 @@
    isNew    Optional. Set to  true  to show a "New" badge.
             Remove it (or set false) once it's no longer new.
 
+   links    Optional. Use instead of  url  when one entry should
+            point to several tools/sites rather than one link.
+            Leave  url  out entirely and add:
+
+              links: [
+                { label: "Claude", url: "https://claude.ai" },
+                { label: "ChatGPT", url: "https://chatgpt.com" }
+              ]
+
+            Each one renders as a small link under the entry.
+
    ------------------------------------------------------------
    TO UPLOAD A FILE
    ------------------------------------------------------------
@@ -87,29 +98,21 @@ const RESOURCES = [
     desc: "Team channels, announcements, and day-to-day questions.",
     url: "https://discord.gg/GyPYGn6h6",
     type: "link",
-    section: "essentials",
-    isNew: true
-  },
-  {
-    title: "Team Charter Template",
-    desc: "Set roles, expectations, and meeting norms early on.",
-    url: null,
-    type: "doc",
-    section: "essentials"
-  },
-  {
-    title: "Mentor Office Hours Signup",
-    desc: "Book time with coordinators and mentors.",
-    url: null,
-    type: "form",
     section: "essentials"
   },
   {
     title: "AI Tools for Your Project",
-    desc: "Claude, NotebookLM, Perplexity, and Copilot — for research, drafting, and code.",
-    url: null,
+    desc: "Research, drafting, design, and code — pick the right tool for the job.",
     type: "link",
-    section: "essentials"
+    section: "essentials",
+    links: [
+      { label: "Claude", url: "https://claude.ai" },
+      { label: "ChatGPT", url: "https://chatgpt.com" },
+      { label: "NotebookLM", url: "https://notebooklm.google.com" },
+      { label: "Perplexity", url: "https://www.perplexity.ai" },
+      { label: "GitHub Copilot", url: "https://github.com/features/copilot" },
+      { label: "Gamma", url: "https://gamma.app" }
+    ]
   },
 
   /* ==========================================================

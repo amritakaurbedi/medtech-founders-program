@@ -1402,6 +1402,33 @@ section { padding: 90px 0; }
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
+.resource-link-multi:hover { padding-left: 4px; }
+
+.resource-sublinks {
+  flex-basis: 100%;
+  order: 4;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.resource-sublink {
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--teal-accent);
+  border: 1px solid rgba(45, 212, 196, 0.35);
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.resource-sublink:hover {
+  color: var(--navy-deepest);
+  background: var(--teal-accent);
+  border-color: var(--teal-accent);
+}
+
 .resource-link:hover .resource-arrow {
   opacity: 1;
   transform: translateX(4px);

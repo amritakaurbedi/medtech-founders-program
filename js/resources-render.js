@@ -28,10 +28,14 @@
   }
 
   function buildCard(item) {
-    var ready = !!item.url;
-    var card = el(ready ? 'a' : 'div', 'resource-link' + (ready ? '' : ' resource-link-pending'));
+    var hasLinks = Array.isArray(item.links) && item.links.length > 0;
+    var ready = hasLinks || !!item.url;
+    var card = el(
+      (ready && !hasLinks) ? 'a' : 'div',
+      'resource-link' + (ready ? '' : ' resource-link-pending') + (hasLinks ? ' resource-link-multi' : '')
+    );
 
-    if (ready) {
+    if (ready && !hasLinks) {
       card.href = item.url;
       if (isExternal(item.url)) {
         card.target = '_blank';
@@ -56,14 +60,30 @@
     card.appendChild(el('h3', null, item.title));
     card.appendChild(el('p', null, item.desc));
 
-    if (ready) {
+    if (hasLinks) {
+      var sublinks = el('div', 'resource-sublinks');
+      item.links.forEach(function (sub) {
+        var subLink = el('a', 'resource-sublink', sub.label);
+        subLink.href = sub.url;
+        if (isExternal(sub.url)) {
+          subLink.target = '_blank';
+          subLink.rel = 'noopener';
+        }
+        sublinks.appendChild(subLink);
+      });
+      card.appendChild(sublinks);
+    } else if (ready) {
       var arrow = el('span', 'resource-arrow', '\u2192');
       arrow.setAttribute('aria-hidden', 'true');
       card.appendChild(arrow);
     }
 
     // Data used by the search filter
-    card.dataset.search = (item.title + ' ' + item.desc + ' ' + type).toLowerCase();
+    var searchText = item.title + ' ' + item.desc + ' ' + type;
+    if (hasLinks) {
+      searchText += ' ' + item.links.map(function (l) { return l.label; }).join(' ');
+    }
+    card.dataset.search = searchText.toLowerCase();
 
     return card;
   }
