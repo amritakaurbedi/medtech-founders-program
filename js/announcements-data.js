@@ -35,6 +35,6 @@
 const ANNOUNCEMENTS = [
   {
     date: "Oct 1",
-    text: "Welcome back! Team sign-ups for Fall are now open — check your email for the form."
+    text: "Team formation form is due Oct 9 at 11:59pm — <a href=\"https://forms.gle/cA3ukDBe4oURCQxz6\" target=\"_blank\" rel=\"noopener\" class=\"inline-link\">fill it out here</a>."
   },
 ];
