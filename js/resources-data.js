@@ -83,20 +83,6 @@ const RESOURCES = [
     section: "essentials"
   },
   {
-    title: "Purchase Order (PO) Form",
-    desc: "Request funding for parts and materials for your build.",
-    url: null,
-    type: "form",
-    section: "essentials"
-  },
-  {
-    title: "3D Print Submission Form",
-    desc: "Submit a print job. Free for program participants.",
-    url: null,
-    type: "form",
-    section: "essentials"
-  },
-  {
     title: "Discord Server",
     desc: "Team channels, announcements, and day-to-day questions.",
     url: "https://discord.gg/GyPYGn6h6",
@@ -216,9 +202,26 @@ const RESOURCES = [
 
   /* ==========================================================
      WINTER — ENTREPRENEURIAL
-     Hidden for now (Coming Soon on the page). Uncomment when
-     Winter resources are ready.
-     ==========================================================
+     ========================================================== */
+  {
+    title: "Purchase Order (PO) Form",
+    desc: "Request funding for parts and materials for your build.",
+    url: null,
+    type: "form",
+    section: "winter"
+  },
+  {
+    title: "3D Print Submission Form",
+    desc: "Submit a print job. Free for program participants.",
+    url: null,
+    type: "form",
+    section: "winter"
+  },
+
+  /* ----------------------------------------------------------
+     Rest of Winter hidden for now (folds into Coming Soon until
+     uncommented — the two forms above still show normally).
+     ----------------------------------------------------------
   {
     title: "Sample Open MIC Pitch Deck",
     desc: "A strong example pitch to benchmark your own against.",
