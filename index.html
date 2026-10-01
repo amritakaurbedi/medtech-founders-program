@@ -65,6 +65,14 @@
   </nav>
 </header>
 
+<button type="button" id="announcements-toggle" class="announcements-bell announcements-bell-floating" aria-haspopup="dialog" aria-expanded="false" aria-label="View announcements">
+  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path>
+    <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+  </svg>
+  <span id="announcements-badge" class="announcements-badge" hidden>0</span>
+</button>
+
 <main id="main">
 
 <!-- ================= HERO ================= -->
@@ -78,7 +86,7 @@
       <p style="font-size: 1.15rem; color: var(--white-dim); max-width: 520px; margin-bottom: 32px;">
         A hands-on project incubator designed to give UCI undergraduates the resources to bring their medical innovations to life.
       </p>
-      <div style="display:flex; flex-wrap:wrap; gap:14px;">
+      <div style="display:flex; flex-wrap:wrap; align-items:center; gap:14px;">
         <a href="contact.html" class="btn btn-primary">Get Involved</a>
         <a href="about.html" class="btn btn-outline">Learn More</a>
       </div>
@@ -88,6 +96,21 @@
     </div>
   </div>
 </section>
+
+<!-- ================= ANNOUNCEMENTS MODAL ================= -->
+<div id="announcements-modal" class="announcements-modal" aria-hidden="true">
+  <div class="announcements-backdrop" data-announcements-close></div>
+  <div class="announcements-box" role="dialog" aria-modal="true" aria-labelledby="announcements-title">
+    <div class="announcements-box-header">
+      <h2 id="announcements-title">Announcements</h2>
+      <button type="button" class="announcements-close" data-announcements-close aria-label="Close announcements">&times;</button>
+    </div>
+    <ul id="announcements-list" class="announcements-list"></ul>
+    <p id="announcements-empty" style="display:none; color: var(--white-dim);">
+      No announcements right now &mdash; check back soon.
+    </p>
+  </div>
+</div>
 
 <!-- ================= QUICK STATS / PROGRAM SNAPSHOT ================= -->
 <section style="padding-top: 0;">
@@ -188,6 +211,8 @@
   </div>
 </footer>
 
+<script src="js/announcements-data.js"></script>
+<script src="js/announcements-render.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

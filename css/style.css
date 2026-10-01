@@ -381,6 +381,188 @@ h1 { font-weight: 700; }
 .card-accent-violet { border-top: 2px solid var(--violet-bright); }
 .card-accent-blue { border-top: 2px solid var(--blue-accent); }
 
+/* ---- Announcements (home page) ---- */
+.announcements-bell {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin-left: 6px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(120deg, var(--blue-accent), var(--teal-accent));
+  color: var(--navy-deepest);
+  cursor: pointer;
+  box-shadow: 0 0 0 0 rgba(45, 212, 196, 0.5);
+  animation: announcements-pulse 2.4s ease-in-out infinite;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.announcements-bell:hover,
+.announcements-bell:focus-visible {
+  transform: scale(1.08);
+}
+
+.announcements-bell-floating {
+  position: fixed;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  z-index: 150;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35), 0 0 0 0 rgba(45, 212, 196, 0.5);
+}
+
+.announcements-bell-floating:hover,
+.announcements-bell-floating:focus-visible {
+  transform: translateY(-50%) scale(1.08);
+}
+
+@media (max-width: 700px) {
+  .announcements-bell-floating {
+    top: auto;
+    bottom: 20px;
+    right: 16px;
+    transform: none;
+    width: 48px;
+    height: 48px;
+  }
+
+  .announcements-bell-floating:hover,
+  .announcements-bell-floating:focus-visible {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes announcements-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(45, 212, 196, 0.45); }
+  70%  { box-shadow: 0 0 0 10px rgba(45, 212, 196, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(45, 212, 196, 0); }
+}
+
+.announcements-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 999px;
+  background: #ff5d6c;
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+  border: 2px solid var(--navy-deepest);
+}
+
+.announcements-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.announcements-modal.open { display: flex; }
+
+.announcements-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 8, 20, 0.7);
+  backdrop-filter: blur(3px);
+}
+
+.announcements-box {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  max-height: 80vh;
+  overflow-y: auto;
+  background: var(--navy-mid);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+  padding: 26px 28px 10px;
+}
+
+.announcements-box-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.announcements-box-header h2 {
+  font-size: 1.3rem;
+}
+
+.announcements-close {
+  background: none;
+  border: none;
+  color: var(--white-dim);
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 8px;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.announcements-close:hover,
+.announcements-close:focus-visible {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.announcements-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.announcement-item {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.announcement-item:last-child { border-bottom: none; }
+
+.announcement-date {
+  flex: 0 0 auto;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--teal-accent);
+  min-width: 56px;
+}
+
+.announcement-text {
+  flex: 1 1 260px;
+  color: var(--white-dim);
+}
+
+.announcement-new {
+  flex: 0 0 auto;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--navy-deepest);
+  background: var(--teal-accent);
+  padding: 3px 9px;
+  border-radius: 999px;
+}
+
 /* ---- Sections ---- */
 section { padding: 90px 0; }
 
