@@ -141,31 +141,10 @@ const RESOURCES = [
     section: "fall"
   },
   {
-    title: "Poster Template",
-    desc: "Branded starting point for your Idea Incubator poster.",
-    url: null,
-    type: "slides",
-    section: "fall"
-  },
-  {
     title: "Fall Workshop Slides",
     desc: "Decks from Project 101, Fabrication Fundamentals, Kickoff, and Sketch-a-thon.",
     url: null,
     type: "folder",
-    section: "fall"
-  },
-  {
-    title: "SolidWorks Tutorials",
-    desc: "Get up to speed on CAD before your first design review.",
-    url: null,
-    type: "video",
-    section: "fall"
-  },
-  {
-    title: "Judging Rubric",
-    desc: "How CODR, PDR, and poster presentations are actually scored.",
-    url: null,
-    type: "pdf",
     section: "fall"
   },
   {
@@ -193,13 +172,6 @@ const RESOURCES = [
     title: "UCI Libraries",
     desc: "Database access, journal subscriptions, and research help.",
     url: "https://www.lib.uci.edu",
-    type: "link",
-    section: "fall"
-  },
-  {
-    title: "Poster Printing Info",
-    desc: "Where to print on campus, cost, and how early to submit.",
-    url: null,
     type: "link",
     section: "fall"
   },
